@@ -1,2 +1,6 @@
-FROM tomcat:8.0.20-jre8
-COPY target/Example-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/sample.war
+FROM tomcat:8.5.16-jre8-alpine
+
+MAINTAINER veena
+COPY sample.war /usr/local/tomcat/webapps/
+
+CMD ["catalina.sh","run"]
